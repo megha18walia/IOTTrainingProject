@@ -12,11 +12,13 @@ using Microsoft.Azure.Devices.Provisioning.Service;
 
 namespace DeviceProvision
 {
-    public static class DeviceProvisionAllocate
+    public static class DeviceAllocationFunction
     {
-        [FunctionName("DeviceProvisionAllocate")]
-		public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
-		{
+        [FunctionName("DeviceAllocationFunction")]
+        public static async Task<IActionResult> Run(
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
+            ILogger log)
+        {
 			string stringBody = null;
 			using (var bodyReader = new StreamReader(req.Body))
 			{
@@ -46,17 +48,17 @@ namespace DeviceProvision
 			TwinCollection twinTags = new TwinCollection();
 			TwinCollection twinProperties = new TwinCollection();
 
-			if (deviceRegistrationId.StartsWith("car-"))
+			if (deviceRegistrationId.StartsWith("Tata-"))
 			{
 				iotHubHostName = iotHubHostNames[0];
-				twinTags["usage"] = "car";
-				twinProperties["sendInterval"] = "60";
+				twinTags["ServiceProvider"] = "Tata";
+				twinProperties["channel"] = "1000";
 			}
 			else
 			{
 				iotHubHostName = iotHubHostNames[1];
-				twinTags["usage"] = "not a car";
-				twinProperties["sendInterval"] = "30";
+				twinTags["ServiceProvider"] = "Airtel";
+				twinProperties["channel"] = "1111";
 			}
 
 			var resultObject = new
@@ -70,5 +72,5 @@ namespace DeviceProvision
 
 			return new OkObjectResult(resultObject);
 		}
-	}
+    }
 }

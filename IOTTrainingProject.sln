@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30104.148
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IOTTrainingProject-1", "IOTTrainingProject\IOTTrainingProject-1.csproj", "{893570EC-EF94-4F22-A0E4-F2ADC57DEF81}"
 EndProject
@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IOTTrainingProject-2", "IOT
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IOTTrainingProject-3", "IOTTrainingProject-3\IOTTrainingProject-3.csproj", "{212B04A2-7E72-4061-B9E6-B276EA3092D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceProvision", "DeviceProvision\DeviceProvision.csproj", "{3268E90E-9218-46D5-9A29-76BC2EB7BB8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeviceAllocation", "DeviceAllocation\DeviceAllocation.csproj", "{858069B5-8799-46BE-8B7E-01D6FCCF5751}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IOT-Central", "..\..\Documentation\microsoft-azure-iot-developer-manage-iot-devices-azure-iot-central\IOT-Central\IOT-Central\IOT-Central\IOT-Central.csproj", "{61F4BE6F-A0D5-4F61-8869-B62562F906DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +31,14 @@ Global
 		{212B04A2-7E72-4061-B9E6-B276EA3092D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{212B04A2-7E72-4061-B9E6-B276EA3092D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{212B04A2-7E72-4061-B9E6-B276EA3092D9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3268E90E-9218-46D5-9A29-76BC2EB7BB8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3268E90E-9218-46D5-9A29-76BC2EB7BB8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3268E90E-9218-46D5-9A29-76BC2EB7BB8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3268E90E-9218-46D5-9A29-76BC2EB7BB8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{858069B5-8799-46BE-8B7E-01D6FCCF5751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{858069B5-8799-46BE-8B7E-01D6FCCF5751}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{858069B5-8799-46BE-8B7E-01D6FCCF5751}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{858069B5-8799-46BE-8B7E-01D6FCCF5751}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61F4BE6F-A0D5-4F61-8869-B62562F906DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61F4BE6F-A0D5-4F61-8869-B62562F906DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61F4BE6F-A0D5-4F61-8869-B62562F906DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61F4BE6F-A0D5-4F61-8869-B62562F906DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

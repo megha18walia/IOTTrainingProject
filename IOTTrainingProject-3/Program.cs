@@ -13,13 +13,13 @@ namespace IOTTrainingProject_3
     {
         // TODO: set your DPS info here:
         private const string dpsGlobalDeviceEndpoint = "global.azure-devices-provisioning.net";
-        private const string dpsIdScope = "0ne002F095E";
+        private const string dpsIdScope = "0ne00627EF0";
 
         // TODO: set the keys for the symmetric key enrollment group here:
-        private const string enrollmentGroupPrimaryKey = "/LwFGOVJJ2xfp3uJyv2DZ2ugAsDwgBZUB1UB6WeyKxJ5cjJty0cnnx4MbCqhYLS2iWtwVMIPrm5lx5DTlzczwg==";
-        private const string enrollmentGroupSecondaryKey = "gVNBcdltNCZxcQ1m2JG9KQ7XnXFqobvxXytYgjB2Co4cOEP0dz2ePAugKV3Rk5zvEEZJZZKI/dgMEfA4oC5FCA==";
+        private const string enrollmentGroupPrimaryKey = "qhJZGL+q2qX45RK29E7LIrvTIfm7V9+z9YX0Q2K2xFjeXxDAfgODzi7FvME2kPqHm+elEp1oB1/FSPNSUVDoWQ==";
+        private const string enrollmentGroupSecondaryKey = "1LA0lfCSIITQWfC7iIotiDLIbLrfomHysg9uRJ0eVSyOLzaBBfGv3j5BDgcE4AlXDWUMgZ6snRBpqhiLfzyrKg==";
 
-        private static readonly string[] deviceUsages = new[] { "car", "building", "plane" };
+        private static readonly string[] deviceUsages = new[] { "Airtel", "Tata" };
         private static readonly Random random = new Random();
 
         static async Task Main(string[] args)
@@ -27,7 +27,7 @@ namespace IOTTrainingProject_3
             Console.WriteLine("*** Press ENTER to start device registrations ***");
             Console.ReadLine();
 
-            await RegisterDevices(10);
+            await RegisterDevices(50);
 
             Console.WriteLine("*** Press ENTER to quit ***");
             Console.ReadLine();

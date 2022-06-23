@@ -17,7 +17,7 @@ namespace IOTTrainingProject
 		static string reportedProperty = "";
 		static DeviceClient Client = null;
 
-		static int desiredPropertyValue = 30;
+		static string desiredPropertyValue = "";
 		static int ReportedPropertyValue = 0;
 
 		static async Task Main(string[] args)
@@ -36,19 +36,19 @@ namespace IOTTrainingProject
 			{
 
 				Console.WriteLine("Enter the IoT Hub Connection String");
-				IoTHubConnectionString = "HostName=iothubdemomegha.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=wrJbOYxSDvN1eevbrulcwJ6Qd+OWMg9FGJZDVif9Lm0=";
+				IoTHubConnectionString = "HostName=iothubdemomegha.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=qPZAc7EaH7mXczCsoBFD0b5dJccxPuli4wzj6gyyFv0=";
 
 				Console.WriteLine("Enter the Device Connection String");
-				DeviceConnectionString = "HostName=iothubdemomegha.azure-devices.net;DeviceId=device-02;SharedAccessKey=UL2otj689VYuZedik4WFLhhLzXhygs1ECrMvZvXKkhM=";
+				DeviceConnectionString = "HostName=iothubdemomegha.azure-devices.net;DeviceId=Airtel_109088;SharedAccessKey=4iMNVtMQ1ptwUJ/Q291fgHzgkLVVRxkpGeSZmBrcQ04=";
 
 				Console.WriteLine("Enter the Device ID");
-				DeviceID = "device-02";
+				DeviceID = "Airtel_109088";
 
 				Console.WriteLine("Enter the Desired Property Key");
-				desiredProperty = "tempLevel";
+				desiredProperty = "channel_status";
 
 				Console.WriteLine("Enter the Reported Property Key");
-				reportedProperty = "coolerOn";
+				reportedProperty = "channel";
 
 				InitClient();
 
@@ -89,6 +89,7 @@ namespace IOTTrainingProject
 			try
 			{
 				var twin = await registryManager.GetTwinAsync(DeviceID);
+				
 				Console.WriteLine(twin.ToJson());
 			}
 			catch (Exception ex)
@@ -122,7 +123,7 @@ namespace IOTTrainingProject
 
 				TwinCollection reportedProperties;
 				reportedProperties = new TwinCollection();
-				reportedProperties["coolerOn"] = ReportedPropertyValue;
+				reportedProperties["channel"] = ReportedPropertyValue;
 				await Client.UpdateReportedPropertiesAsync(reportedProperties);
 			}
 			catch (Exception ex)
