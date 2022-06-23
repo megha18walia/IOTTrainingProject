@@ -11,10 +11,12 @@ namespace IOTTrainingProject_2
 
         static async Task Main(string[] args)
         {
-            await new TraverseMessages().Initiallize();
-            //await FileUpload.UploadFile();
+            //await TraverseMessages.Initiallize();
+            // await FileUpload.Upload();
+            await new Thumbprint().AuthenticateCertificate();
         }
+    }
        
 
-    }
+   
 }

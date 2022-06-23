@@ -18,7 +18,7 @@ namespace IOTTrainingProject_2
         static FileUploadSasUriResponse sasUploadUri = null;
         static Uri fileUploadUri = null;
 
-        static async Task Upload()
+        public static async Task Upload()
         {
             Console.WriteLine("*************************************************");
             Console.WriteLine("Welcome to the Azure IoT Hub Device Upload Tester");
@@ -33,7 +33,7 @@ namespace IOTTrainingProject_2
             try
             {
                 Console.WriteLine("Enter the Device Connection String");
-                DeviceConnectionString = Console.ReadLine();
+                DeviceConnectionString = "HostName=iothubdemomegha.azure-devices.net;DeviceId=device-02;SharedAccessKey=UL2otj689VYuZedik4WFLhhLzXhygs1ECrMvZvXKkhM=";
 
                 InitClient();
 
